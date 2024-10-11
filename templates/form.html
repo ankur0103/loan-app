@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCF</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <form action="/submit" method="POST">
+            <div class="form-group">
+                <label for="face_amount">Face Amount:</label>
+                <input type="number" id="face_amount" name="face_amount" required>
+            </div>
+
+            <div class="form-group">
+                <label for="spread">Spread:</label>
+                <input type="number" id="spread" name="spread" step="any" required>
+            </div>
+
+            <div class="form-group">
+                <label for="issue_date">Issue Date:</label>
+                <input type="date" id="issue_date" name="issue_date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="first_payment_date">First Payment Date:</label>
+                <input type="date" id="first_payment_date" name="first_payment_date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="maturity_date">Maturity Date:</label>
+                <input type="date" id="maturity_date" name="maturity_date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="yield">Yield:</label>
+                <input type="number" id="yield" name="yield" step="any" required>
+            </div>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
